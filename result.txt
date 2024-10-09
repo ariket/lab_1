@@ -1,0 +1,55 @@
+Host: 45.33.32.156 (scanme.nmap.org) State: up
+--------------------------------------------------------
+Host: 127.0.0.1 () State: up
+--------------------------------------------------------
+Host: 45.33.32.156 (scanme.nmap.org) State: up
+Protocol: tcp
+Port: 22, State: open, Name: ssh, Version: 6.6.1p1 Ubuntu 2ubuntu2.13
+Port: 25, State: filtered, Name: smtp, Version: 
+Port: 80, State: open, Name: http, Version: 2.4.7
+Port: 135, State: filtered, Name: msrpc, Version: 
+Port: 139, State: filtered, Name: netbios-ssn, Version: 
+Port: 445, State: filtered, Name: microsoft-ds, Version: 
+Port: 9929, State: open, Name: nping-echo, Version: 
+Port: 31337, State: open, Name: tcpwrapped, Version: 
+--------------------------------------------------------
+Host: 127.0.0.1 () State: up
+Protocol: tcp
+Port: 135, State: open, Name: msrpc, Version: 
+Port: 445, State: open, Name: microsoft-ds, Version: 
+Port: 903, State: open, Name: vmware-auth, Version: 1.10
+Port: 5357, State: open, Name: http, Version: 2.0
+--------------------------------------------------------
+Host: 192.168.1.1 () State: up
+Protocol: tcp
+Port: 53, State: open, Name: domain, Version: 
+Port: 80, State: open, Name: http, Version: 
+Port: 8080, State: open, Name: http, Version: 
+Port: 49152, State: open, Name: , Version: 
+--------------------------------------------------------
+Host: 45.33.32.156 (scanme.nmap.org) State: up
+Protocol: tcp
+Port: 22, State: open, Name: ssh, Version: 6.6.1p1 Ubuntu 2ubuntu2.13
+Port: 25, State: filtered, Name: smtp, Version: 
+Port: 80, State: filtered, Name: http, Version: 
+Port: 135, State: filtered, Name: msrpc, Version: 
+Port: 139, State: filtered, Name: netbios-ssn, Version: 
+Port: 445, State: filtered, Name: microsoft-ds, Version: 
+Port: 9929, State: open, Name: nping-echo, Version: 
+Port: 31337, State: open, Name: tcpwrapped, Version: 
+--------------------------------------------------------
+Host: 45.33.32.156 (scanme.nmap.org) State: up
+Protocol: tcp
+Port: 22, State: open, Name: ssh, Version: 6.6.1p1 Ubuntu 2ubuntu2.13
+Port: 25, State: filtered, Name: smtp, Version: 
+Port: 80, State: open, Name: http, Version: 
+Port: 135, State: filtered, Name: msrpc, Version: 
+Port: 139, State: filtered, Name: netbios-ssn, Version: 
+Port: 445, State: filtered, Name: microsoft-ds, Version: 
+Port: 9929, State: open, Name: nping-echo, Version: 
+Port: 31337, State: open, Name: tcpwrapped, Version: 
+--------------------------------------------------------
+Host: 45.33.32.156 (scanme.nmap.org) State: up
+--------------------------------------------------------
+Host: 127.0.0.1 () State: up
+--------------------------------------------------------
