@@ -38,23 +38,27 @@ def file_list():
             print(f"{index} - {file}")
             file_index_name[f"{index}"] = f"{file}"
             index += 1
+    if len(file_index_name) == 0:
+        print(f"No .txt files found in {os.getcwd()}")
+        return False
     return file_index_name
 
 
 def select_file():
     """ Select a .txt file in current directory """
     file_index_name = file_list()
-    print("Select file by number:")
-    while True:
-        try:
-            selected_file = int(input(">>> "))
-        except ValueError:
-            print(f"Select file by number 1 - {len(file_index_name)}.")
-        else:
-            if selected_file <= len(file_index_name):
-                return file_index_name[f"{selected_file}"]
-            print(f"Select file by number 1 - {len(file_index_name)}.")
-
+    if file_index_name:
+        print("Select file by number:")
+        while True:
+            try:
+                selected_file = int(input(">>> "))
+            except ValueError:
+                print(f"Select file by number 1 - {len(file_index_name)}.")
+            else:
+                if selected_file <= len(file_index_name):
+                    return file_index_name[f"{selected_file}"]
+                print(f"Select file by number 1 - {len(file_index_name)}.")
+    return False
 
 def read_file(filename):
     """Read a .txt file and print to command line"""
@@ -108,7 +112,10 @@ def run_nmap(options):
         while True:
             command = input(">>> ").lower()
             if command == "y":
-                return select_file()
+                if select_file():
+                    pass
+                else:
+                    return create_file()
             if command == "n":
                 return create_file()
             print(f"Invalid command: '{command}'.")
@@ -181,8 +188,10 @@ def run_nmap(options):
         command = input(">>> ")
         if command == "1":
             ip_address_file = select_file()
-            nmap_scan(ip_address_file, None)
-            break
+            if ip_address_file:
+                nmap_scan(ip_address_file, None)
+                break
+            command = "file missing"
         if command == "2":
             ip_address = input_ip()
             nmap_scan(None, ip_address)
@@ -214,7 +223,9 @@ def main():
         elif main_input == "3":
             run_nmap_original()
         elif main_input == "7":
-            read_file(select_file())
+            file_to_read = select_file()
+            if file_to_read:
+                read_file(file_to_read)
         elif main_input == "8":
             file_list()
         elif main_input in exit_command:
